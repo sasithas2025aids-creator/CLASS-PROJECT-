@@ -1,13 +1,15 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Project from './pages/Project';
 import Tasks from './pages/Tasks';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import Calender from './pages/Calender';
 import Clients from './pages/Clients';
 import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
 import Team from './pages/Team';
-
 
 function App() {
     return (
@@ -15,6 +17,7 @@ function App() {
             <Routes>
 
                 <Route path="/" element={<Login />} />
+                <Route path="/register" element={<Register />} />
                 <Route path="/project" element={<Project />} />
                 <Route path="/tasks" element={<Tasks />} />
                 <Route path="/calender" element={<Calender />} />
@@ -22,7 +25,6 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/team" element={<Team />} />
-                
 
             </Routes>
         </BrowserRouter>
