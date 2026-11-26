@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Project from './pages/Project';
 import Tasks from './pages/Tasks';
@@ -16,9 +15,7 @@ function App() {
             <Routes>
 
                 <Route path="/" element={<Login />} />
-
                 <Route path="/project" element={<Project />} />
-
                 <Route path="/tasks" element={<Tasks />} />
                 <Route path="/calender" element={<Calender />} />
                 <Route path="/clients" element={<Clients />} />
