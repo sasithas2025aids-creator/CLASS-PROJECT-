@@ -11,11 +11,18 @@ import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
 import Team from './pages/Team';
 
+// Admin pages
+import Adminlayout from './pages/admin/Adminlayout';
+import AdminDashboard from './pages/admin/Dashboard';
+import AdminSettings from './pages/admin/Settings';
+import Userdetails from './pages/admin/Userdetails';
+
 function App() {
     return (
         <BrowserRouter>
             <Routes>
 
+                {/* Existing Routes */}
                 <Route path="/" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/project" element={<Project />} />
@@ -25,6 +32,16 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/team" element={<Team />} />
+
+                {/* Parent Routing */}
+                <Route path="/admin" element={<Adminlayout />}>
+
+                    {/* Child Routes */}
+                    <Route path="dashboard" element={<AdminDashboard />} />
+                    <Route path="settings" element={<AdminSettings />} />
+                    <Route path="userdetails" element={<Userdetails />} />
+
+                </Route>
 
             </Routes>
         </BrowserRouter>
